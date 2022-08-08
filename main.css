@@ -2,3 +2,18 @@ body {
     background-color: black;
     color: white;
   }
+
+h1{
+    text-align:center
+  }
+
+h2{
+    text-align:left
+  }
+
+h3{
+    text-align:right
+  }
+h4{
+    text-align:justify
+}
