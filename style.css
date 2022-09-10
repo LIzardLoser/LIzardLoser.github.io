@@ -1,0 +1,31 @@
+body {
+    background-color: black;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ShakeButton {
+    position: absolute;
+    margin:auto;
+    padding: auto;
+    align-self: center;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+.shakeactive {
+    animation: shake 5s;
+}
+
+#LastPage {
+    color: white;
+}
+
+@keyframes shake {
+    25% {transform: translateX(75%);}
+    50% {transform: translateX(-100%);}
+}
