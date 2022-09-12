@@ -1,23 +1,28 @@
-var x = 95;
-var y = 40;
+var ivdt = Math.floor(Math.random() * 20) + 1;
 
-var dx = -2;
+var x = Math.floor(Math.random() * 200) + 1;
+var y = Math.floor(Math.random() * 200) + 1;
+
+console.log("Start X: " + x + "\n" + "Start Y: " + y + "\n" + "Milliseconds: " + ivdt);
+
+var dx = 2;
 var dy = -2;
 
 var canvas = document.getElementById("canvas");
-canvas.height = 300;
-canvas.width = 500;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
+var ballradius = 25;
 
 function draw() {
     ctx.beginPath();
     ctx.strokeStyle = "white";
-    ctx.arc(x,y,25,0,Math.PI * 2);
+    ctx.arc(x,y,ballradius,0,Math.PI * 2);
     ctx.stroke();
-    if (dy > canvas.height-25 || y + dy < 25){
+    if (y + dy > canvas.height-25 || y + dy < ballradius){
         dy = -dy;
     }
-    if (dx > canvas.width-25 || x + dx < 25){
+    if (x + dx > canvas.width-25 || x + dx < ballradius){
         dx = -dx;
     }
     
@@ -30,4 +35,4 @@ function draw() {
     ctx.rect(0,0,canvas.width,canvas.height);
     ctx.stroke();
 }
-setInterval(draw,100);
+setInterval(draw,ivdt);
