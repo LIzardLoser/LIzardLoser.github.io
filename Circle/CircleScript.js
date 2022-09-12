@@ -5,8 +5,19 @@ var y = Math.floor(Math.random() * 200) + 1;
 
 console.log("Start X: " + x + "\n" + "Start Y: " + y + "\n" + "Milliseconds: " + ivdt);
 
-var dx = 2;
-var dy = -2;
+var dx = Math.floor(Math.random * 2) + 1;
+var dy = Math.floor(Math.random * 2) + 1;
+
+if (dx > 1){
+    dx = 2
+}else{
+    dx = -2
+}
+if (dy > 1){
+    dy = 2
+}else{
+    dy = -2
+}
 
 var canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth;
