@@ -1,19 +1,19 @@
-var ivdt = Math.floor(Math.random() * 20) + 1;
+var ivdt = Math.floor(Math.random() * 15) + 1;
 
-var x = Math.floor(Math.random() * 200) + 1;
-var y = Math.floor(Math.random() * 200) + 1;
+var x = Math.floor(Math.random() * window.innerWidth) + 1;
+var y = Math.floor(Math.random() * window.innerHeight) + 1;
 
 console.log("Start X: " + x + "\n" + "Start Y: " + y + "\n" + "Milliseconds: " + ivdt);
 
-var dx = Math.floor(Math.random * 2) + 1;
-var dy = Math.floor(Math.random * 2) + 1;
+var dx;
+var dy;
 
-if (dx > 1){
+if (Math.random() < 0.5){
     dx = 2
 }else{
     dx = -2
 }
-if (dy > 1){
+if (Math.random() < 0.5){
     dy = 2
 }else{
     dy = -2
