@@ -29,6 +29,10 @@ body {
     color: white;
 }
 
+#OtherPage {
+    color: white;
+}
+
 @keyframes shake {
     25% {transform: translateX(75%);}
     50% {transform: translateX(-100%);}
