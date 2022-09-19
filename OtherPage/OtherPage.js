@@ -14,6 +14,8 @@ var pheight = 20;
 var adown = false;
 var ddown = false;
 
+var score = 0;
+
 function drawBorder(){
     ctx.beginPath();
     ctx.strokeStyle = "white";
@@ -26,14 +28,19 @@ function drawBall() {
     ctx.strokeStyle = "white";
     ctx.arc(x,y,ballradius,0,Math.PI * 2);
     ctx.stroke();
-    if (y + dy > cav.height - ballradius || y + dy < ballradius){
+    if (y + dy < ballradius){
         dy = -dy;
+    }else if (y + dy > cav.height - ballradius){
+        clearInterval(timer);
+        ctx.fillText('Game Over Score Was: '+ score, 300, 250)
     }
     if (x + dx > cav.width - ballradius || x + dx < ballradius){
         dx = -dx;
     }
-    if (y - cav.height > py - cav.height && x - cav.width > px - cav.width) {
+    if (y - cav.height > py - cav.height && x - cav.width > px - cav.width && x - cav.width < px - cav.width + pwidth) {
         dy = -dy;
+        score += 1
+        console.log(score);
     }
 
     
@@ -79,4 +86,4 @@ function draw() {
     drawPaddle();
 
 }
-setInterval(draw,10);
+const timer = setInterval(draw,10);
