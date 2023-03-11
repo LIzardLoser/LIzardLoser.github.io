@@ -8,3 +8,9 @@ button {
     color: white;
     border: 1px solid white;
 }
+
+#platformerpage {
+    color: white;
+    top: 1000px;
+    left: 700px;
+}
